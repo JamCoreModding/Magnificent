@@ -11,19 +11,10 @@ val modVersion: String by project
 group = "io.github.jamalam360"
 version = modVersion
 
-fun DependencyHandlerScope.includeModApi(dependency: Any) {
-    modApi(dependency)
-    include(dependency)
-}
-
-fun DependencyHandlerScope.includeModImplementation(dependency: Any) {
-    modImplementation(dependency)
-    include(dependency)
-}
-
 repositories {
     val mavenUrls = listOf(
-            "https://maven.terraformersmc.com/releases"
+        "https://maven.terraformersmc.com/releases",
+        "https://maven.shedaniel.me/"
     )
 
     for (url in mavenUrls) {
@@ -36,6 +27,7 @@ dependencies {
     val mappingsVersion: String by project
     val loaderVersion: String by project
     val fabricApiVersion: String by project
+    val clothConfigVersion: String by project
     val modMenuVersion: String by project
 
     minecraft("com.mojang:minecraft:$minecraftVersion")
@@ -45,8 +37,8 @@ dependencies {
 
     modImplementation("net.fabricmc:fabric-loader:$loaderVersion")
     modImplementation("net.fabricmc.fabric-api:fabric-api:$fabricApiVersion")
-
-    modRuntimeOnly("com.terraformersmc:modmenu:$modMenuVersion")
+    modImplementation("com.terraformersmc:modmenu:$modMenuVersion")
+    modApi("me.shedaniel.cloth:cloth-config-fabric:$clothConfigVersion")
 }
 
 tasks {

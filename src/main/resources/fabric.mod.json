@@ -19,8 +19,9 @@
     "main": [
       "io.github.jamalam360.magnificent.MagnificentModInit"
     ],
-    "client": [],
-    "server": []
+    "modmenu": [
+      "io.github.jamalam360.magnificent.MagnificentModInit"
+    ]
   },
   "mixins": [
     "magnificent.mixins.json"
