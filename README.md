@@ -1,1 +1,1 @@
-%description%
+A more vanilla friendly alternative to WAILA and it's forks

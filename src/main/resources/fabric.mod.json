@@ -1,37 +1,36 @@
 {
   "schemaVersion": 1,
-  "id": "%id%",
+  "id": "magnificent",
   "version": "${version}",
-  "name": "%name%",
-  "description": "%description%",
+  "name": "Magnificent",
+  "description": "A more vanilla friendly alternative to WAILA and it's forks",
   "authors": [
     "Jamalam360 - Owner, Developer"
   ],
-  "contributors": [],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/",
-    "issues": "https://github.com/%githubOrg%/%github%/issues",
-    "sources": "https://github.com/%githubOrg%/%github%"
+    "issues": "https://github.com/JamCoreModding/Magnificent/issues",
+    "sources": "https://github.com/JamCoreModding/Magnificent"
   },
   "license": "MIT",
-  "icon": "assets/%id%/icon.png",
+  "icon": "assets/magnificent/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "io.github.jamalam360.%name%ModInit"
+      "io.github.jamalam360.magnificent.MagnificentModInit"
     ],
     "client": [],
     "server": []
   },
   "mixins": [
-    "%id%.mixins.json"
+    "magnificent.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.12.5",
     "fabric": "*"
   },
   "custom": {
-    "notify_gradle_properties_url": "https://raw.githubusercontent.com/%githubOrg%/%github%/main/gradle.properties",
+    "notify_gradle_properties_url": "https://raw.githubusercontent.com/JamCoreModding/Magnificent/main/gradle.properties",
     "notify_gradle_properties_key": "mod_version"
   }
 }
