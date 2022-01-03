@@ -97,7 +97,7 @@ public class MagnifyingGlassItem extends Item {
                 modTxt[0] = new LiteralText(" (Minecraft)");
             } else {
                 FabricLoader.getInstance().getModContainer(id.getNamespace()).ifPresentOrElse(
-                        mod -> modTxt[0] = new LiteralText(" " + mod.getMetadata().getName())
+                        mod -> modTxt[0] = new LiteralText(" (" + mod.getMetadata().getName() + ")")
                         , () -> modTxt[0] = new LiteralText(" ").append(new TranslatableText("text.magnificent.unknown_brackets"))
                 );
             }
