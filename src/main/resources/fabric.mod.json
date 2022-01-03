@@ -8,7 +8,7 @@
     "Jamalam360 - Owner, Developer"
   ],
   "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/",
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/magnificent",
     "issues": "https://github.com/JamCoreModding/Magnificent/issues",
     "sources": "https://github.com/JamCoreModding/Magnificent"
   },
@@ -20,15 +20,15 @@
       "io.github.jamalam360.magnificent.MagnificentModInit"
     ],
     "modmenu": [
-      "io.github.jamalam360.magnificent.MagnificentModInit"
+      "io.github.jamalam360.magnificent.MagnificentModMenuInit"
     ]
   },
-  "mixins": [
-    "magnificent.mixins.json"
-  ],
   "depends": {
     "fabricloader": ">=0.12.5",
     "fabric": "*"
+  },
+  "suggests": {
+    "modmenu": "*"
   },
   "custom": {
     "notify_gradle_properties_url": "https://raw.githubusercontent.com/JamCoreModding/Magnificent/main/gradle.properties",

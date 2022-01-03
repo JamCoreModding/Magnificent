@@ -24,23 +24,16 @@
 
 package io.github.jamalam360.magnificent;
 
-import com.terraformersmc.modmenu.api.ConfigScreenFactory;
-import com.terraformersmc.modmenu.api.ModMenuApi;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class MagnificentModInit implements ModInitializer, ModMenuApi {
+public class MagnificentModInit implements ModInitializer {
     @Override
     public void onInitialize() {
         Registry.register(Registry.ITEM, new Identifier("magnificent", "magnifying_glass"), new MagnifyingGlassItem());
         AutoConfig.register(MagnificentConfig.class, GsonConfigSerializer::new);
-    }
-
-    @Override
-    public ConfigScreenFactory<?> getModConfigScreenFactory() {
-        return parent -> AutoConfig.getConfigScreen(MagnificentConfig.class, parent).get();
     }
 }
